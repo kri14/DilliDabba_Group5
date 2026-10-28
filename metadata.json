@@ -1,0 +1,6 @@
+{
+  "name": "Dilli Dabba - Office Tiffin Service",
+  "description": "Home cooked, low oil office lunch delivered by 1 pm in Gurugram, Noida Sector 62 and CP. Monthly tiffin subscription, first meal free.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

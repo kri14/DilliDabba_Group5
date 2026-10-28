@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fdf2f8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff5a1f;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e11d48;
+}
+
+/* Indian Fusion Pop Color Utilities */
+.bg-dilli-orange {
+  background-color: #ff5a1f;
+}
+.text-dilli-orange {
+  color: #ff5a1f;
+}
+.border-dilli-orange {
+  border-color: #ff5a1f;
+}
+
+.bg-rani-pink {
+  background-color: #f43f5e;
+}
+.text-rani-pink {
+  color: #f43f5e;
+}
+
+.bg-haldi-yellow {
+  background-color: #f59e0b;
+}
+.text-haldi-yellow {
+  color: #f59e0b;
+}
+
+.bg-peacock-teal {
+  background-color: #0d9488;
+}
+.text-peacock-teal {
+  color: #0d9488;
+}
+
+/* Indian Fusion Geometric Pattern Backgrounds */
+.bg-desi-pattern {
+  background-color: #faf5ff;
+  background-image: radial-gradient(#ff5a1f 0.75px, transparent 0.75px), radial-gradient(#f43f5e 0.75px, #faf5ff 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.bg-marigold-pattern {
+  background-color: #fffbeb;
+  background-image: radial-gradient(#f59e0b 0.8px, transparent 0.8px);
+  background-size: 24px 24px;
+}
+
+/* Truck Art / Desi Pop Sticker Shadow */
+.shadow-pop-orange {
+  box-shadow: 4px 4px 0px 0px #ff5a1f;
+}
+
+.shadow-pop-pink {
+  box-shadow: 4px 4px 0px 0px #f43f5e;
+}
+
+.shadow-pop-teal {
+  box-shadow: 4px 4px 0px 0px #0d9488;
+}
+
+.shadow-pop-dark {
+  box-shadow: 5px 5px 0px 0px #0f172a;
+}
+
+.shadow-pop-gold {
+  box-shadow: 4px 4px 0px 0px #f59e0b;
+}
+
+/* Infinite Marquee for Indian Street Food Vibe */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 22s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shimmer::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.3) 20%,
+    rgba(255, 255, 255, 0.6) 60%,
+    rgba(255, 255, 255, 0)
+  );
+  animation: shimmer 2.5s infinite;
+  content: '';
+}
